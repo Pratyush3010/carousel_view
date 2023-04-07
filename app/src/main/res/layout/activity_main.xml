@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:background="@android:color/holo_red_light"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:background="@android:color/holo_red_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Carousel View"
+        app:titleTextColor="@color/white"
+        tools:ignore="MissingConstraints" />
+
+    <com.synnapps.carouselview.CarouselView
+        android:layout_marginTop="20dp"
+        android:id="@+id/carouselview"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:fillColor="@color/white"
+        app:strokeColor="#FF7777"
+        app:radius="8dp"
+        app:slideInterval="3000"
+        app:pageColor="@color/black"/>
+    
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="300dp"
+        android:layout_height="280dp"
+        android:id="@+id/viewpager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="50dp"/>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
